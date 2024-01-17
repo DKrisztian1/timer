@@ -1,0 +1,82 @@
+#container {
+    --d:10s; 
+  
+    width: 250px;
+    height: 250px;
+    margin: 40px auto;
+    border: 2px solid #000;
+    display:grid;
+    grid-template-columns:30px;
+    grid-template-rows:30px;
+    place-content: center;
+    border-radius: 50%;
+    transform: rotate(-90.8deg);
+    
+}
+
+  #item {
+    grid-area:1/1;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 90%;
+    background: rgb(233, 0, 0);
+    animation: spin var(--d) linear infinite; 
+    transform:rotate(0) translate(125px) rotate(0);
+
+}
+
+  @keyframes spin {
+    100% {
+      transform:rotate(1turn) translate(125px) rotate(-1turn);
+    }
+}
+
+.Button{
+    width: 90px;
+    height: 35px;
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: 15%;
+
+    position: relative;
+    z-index: 1000;
+
+    cursor: pointer;
+}
+
+#resume{
+    display: none;
+}
+
+.paused{
+    -webkit-animation-play-state:paused !important;
+    -moz-animation-play-state:paused !important;
+    -o-animation-play-state:paused !important; 
+    animation-play-state:paused !important;
+}
+
+#circleContent{
+    position: relative;
+    top: 200px;
+    text-align: center;
+    margin: 0px;
+}
+
+#clock{
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#csik{
+    background-color: black;
+    width: 2px;
+    height: 35px;
+
+    margin: auto;
+    position: relative;
+    top: 60px;
+
+    
+}
